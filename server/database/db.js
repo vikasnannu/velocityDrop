@@ -9,8 +9,7 @@ const DBConnection = async () => {
   const DBNAME = process.env.DB_NAME;
   const DBCLUSTER = process.env.DB_CLUSTER;
 
-  const MONGO_URI = `mongodb+srv://${USERNAME}:${PASSWORD}@${DBCLUSTER}
-  .dzbjof8.mongodb.net/?retryWrites=true&w=majority&appName=${DBNAME}`;
+  const MONGO_URI = `mongodb+srv://${USERNAME}:${PASSWORD}@${DBCLUSTER}.dzbjof8.mongodb.net/?retryWrites=true&w=majority&appName=${DBNAME}`;
 
   try {
     await mongoose.connect(MONGO_URI, { useNewUrlParser: true });
